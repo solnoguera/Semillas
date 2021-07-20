@@ -16,8 +16,8 @@ public abstract class Planta {
 		
 		try {
 			
-			if(anioObtencion <= 0) throw new SemillasException("ERROR! El año de obtención de la semilla no puede ser menor o igual a 0.");
-			if(altura <= 0) throw new SemillasException("ERROR! La altura de la planta (la cual está medida en metros) no puede ser menor o igual a 0.");
+			if(anioObtencion <= 0) throw new SemillasException("¡SEMILLAS ERROR! El año de obtención de la semilla no puede ser menor o igual a 0.");
+			if(altura <= 0) throw new SemillasException("¡SEMILLAS ERROR! La altura de la planta (la cual está medida en metros) no puede ser menor o igual a 0.");
 			
 		} catch(SemillasException e) {
 			System.out.println(e.getMessage());
@@ -49,7 +49,7 @@ public abstract class Planta {
 	
 	public abstract double getEspacioRequerido();
 	
-	
+	public abstract boolean esMiParcelaIdeal(Parcela parcela);
 
 	//GETTERS
 	

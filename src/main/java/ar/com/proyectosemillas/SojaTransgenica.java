@@ -9,4 +9,7 @@ public class SojaTransgenica extends Soja {
 	public boolean daSemillas() {
 		return false;
 	}
+	public boolean esMiParcelaIdeal(Parcela parcela) {
+		return(parcela.cantidadMaximaPlantas() == 1);
+	}
 }

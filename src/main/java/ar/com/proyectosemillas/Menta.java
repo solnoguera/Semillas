@@ -18,5 +18,9 @@ public class Menta extends Planta {
 	public double getEspacioRequerido() {
 		return getAltura() *3;
 	}
+	
+	public boolean esMiParcelaIdeal(Parcela parcela) {
+		return parcela.getSuperficie() >= 6;
+	}
 }
 

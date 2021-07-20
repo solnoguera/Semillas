@@ -26,4 +26,8 @@ public class Soja extends Planta {
 	public double getEspacioRequerido() {
 		return getAltura() / 2;
 	}
+	
+	public boolean esMiParcelaIdeal(Parcela parcela) {
+		return (this.getHorasBajoSol() == parcela.getHorasDeSolRecibidas());
+	}
 }
