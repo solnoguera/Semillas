@@ -2,7 +2,7 @@ package ar.com.proyectosemillas;
 
 import java.util.*;
 
-public class Parcela {
+public abstract class Parcela {
 
 	private double ancho;
 	private double largo;
@@ -51,7 +51,7 @@ public class Parcela {
 	public void plantar(Planta planta) {
 
 		try {
-			if (this.plantas.size() < this.cantidadMaximaPlantas())
+			if (getCantidadPlantas() < this.cantidadMaximaPlantas())
 				plantas.add(planta);
 			else
 				throw new SemillasException(
@@ -70,6 +70,23 @@ public class Parcela {
 		}
 	}
 
+	public abstract boolean seAsociaBien(Planta planta);
+	
+	public int cantidadPlantasBienAsociadas() {
+		
+		int cantidad = 0;
+		for(Planta planta : getPlantas()) {
+			if(seAsociaBien(planta)) {
+				cantidad++;
+			}
+		}
+		return cantidad;
+	}
+	
+	public double porcentajePlantasBienAsociadas() {
+		return cantidadPlantasBienAsociadas() / getCantidadPlantas();
+	}
+	
 	public double getAncho() {
 		return ancho;
 	}
@@ -84,6 +101,10 @@ public class Parcela {
 
 	public List<Planta> getPlantas() {
 		return plantas;
+	}
+	
+	public int getCantidadPlantas() {
+		return this.plantas.size();
 	}
 	
 	
