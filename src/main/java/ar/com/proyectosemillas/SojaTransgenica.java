@@ -1,7 +1,18 @@
 package ar.com.proyectosemillas;
-
+/**
+ * Clase hija de Soja.
+ * 
+ * @author Sol Noguera
+ * @see Soja
+ *
+ */
 public class SojaTransgenica extends Soja {
 
+	/**
+	 * Constructor unico de la clase SojaTransgenica
+	 * @param anioObtencion
+	 * @param altura
+	 */
 	public SojaTransgenica(int anioObtencion, float altura) {
 		super(anioObtencion, altura);
 	}

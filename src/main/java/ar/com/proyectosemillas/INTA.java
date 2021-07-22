@@ -1,19 +1,33 @@
 package ar.com.proyectosemillas;
 
 import java.util.*;
-
+/**
+ * Clase que modela al Instituto Nacional de Tecnología Agropecuaria (INTA), el cual
+ * le interesa realizar una serie de estadísticas sobre todas las parcelas del país.
+ * 
+ * @author Sol Noguera
+ * @see Parcela, Planta
+ */
 public class INTA {
 
 	private List<Parcela> parcelas;
-	
+	/**
+	 * Constructor INTA sin parametros.
+	 */
 	public INTA() {
 		this.parcelas = new ArrayList<Parcela>();
 	}
-	
+	/**
+	 * Constructor INTA parametrizado.
+	 * @param Lista de parcelas
+	 */
 	public INTA(List<Parcela> parcelas) {
 		this.parcelas = parcelas;
 	}
-	
+	/**
+	 * 
+	 * @param Parcela para agregar a la lista.
+	 */
 	public void agregarParcela(Parcela parcela) {
 		if(parcela != null) {
 			parcelas.add(parcela);

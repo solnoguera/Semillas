@@ -1,18 +1,28 @@
 package ar.com.proyectosemillas;
-
+/**
+ * Clase hija de Planta.
+ * 
+ * @author Sol Noguera
+ * @see Planta
+ *
+ */
 public class Soja extends Planta {
 
-	
-	public Soja(int anioObtencion, float altura) {
+	/**
+	 * Constructor unico de la clase Soja
+	 * @param anioObtencion
+	 * @param altura
+	 */
+	public Soja(int anioObtencion, double altura) {
 		super(anioObtencion, altura);
 	}
 	
 	
-	public float getHorasBajoSol() {
+	public int getHorasBajoSol() {
 		
 		if(getAltura() < 0.5) {
 			return 6;
-		} else if (getAltura() >= 0.5 && getAltura() < 1) {
+		} else if (getAltura() >= 0.5 && getAltura() <= 1) {
 			return 7;
 		} else return 9;
 	}

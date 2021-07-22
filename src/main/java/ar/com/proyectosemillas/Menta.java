@@ -1,13 +1,24 @@
 package ar.com.proyectosemillas;
-
+/**
+ * Clase hija de Planta.
+ * 
+ * @author Sol Noguera
+ * @see Planta
+ *
+ */
 public class Menta extends Planta {
 
-	public Menta(int anioObtencion, float altura) {
+	/**
+	 * Constructor unico de la clase Menta
+	 * @param anioObtencion
+	 * @param altura
+	 */
+	public Menta(int anioObtencion, double altura) {
 		super(anioObtencion, altura);
 	}
 	
 	
-	public float getHorasBajoSol() {
+	public int getHorasBajoSol() {
 		return 6;
 	}
 	
@@ -16,11 +27,11 @@ public class Menta extends Planta {
 	}
 	
 	public double getEspacioRequerido() {
-		return getAltura() *3;
+		return getAltura() * 3;
 	}
 	
 	public boolean esMiParcelaIdeal(Parcela parcela) {
-		return parcela.getSuperficie() >= 6;
+		return parcela.getSuperficie() > 6;
 	}
 }
 
