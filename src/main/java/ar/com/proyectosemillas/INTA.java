@@ -42,7 +42,7 @@ public class INTA {
 	 */
 	
 	public double promedioPlantas() {
-		int sumaPlantas = 0;
+		double sumaPlantas = 0;
 		
 		for(Parcela parcela : this.parcelas) {
 			
@@ -50,7 +50,7 @@ public class INTA {
 			sumaPlantas += cantPlantas;
 		}
 		
-		return (sumaPlantas / parcelas.size());
+		return (sumaPlantas / (double)parcelas.size());
 	}
 	
 	
