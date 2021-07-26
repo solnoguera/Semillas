@@ -13,7 +13,7 @@ public class SojaTransgenica extends Soja {
 	 * @param anioObtencion
 	 * @param altura
 	 */
-	public SojaTransgenica(int anioObtencion, float altura) {
+	public SojaTransgenica(int anioObtencion, double altura) {
 		super(anioObtencion, altura);
 	}
 	

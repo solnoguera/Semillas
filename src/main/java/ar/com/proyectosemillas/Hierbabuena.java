@@ -13,7 +13,7 @@ public class Hierbabuena extends Menta {
 	 * @param anioObtencion
 	 * @param altura
 	 */
-	public Hierbabuena(int anioObtencion, float altura) {
+	public Hierbabuena(int anioObtencion, double altura) {
 		super(anioObtencion, altura);
 	}
 	

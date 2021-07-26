@@ -74,6 +74,7 @@ public class INTA {
 				
 				if(parcela.porcentajePlantasBienAsociadas() > mayorPorcentaje) {
 					elegida = parcela;
+					mayorPorcentaje = parcela.porcentajePlantasBienAsociadas();
 				}
 			}
 		}
